@@ -1,0 +1,34 @@
+{
+  "name": "gulp-es6-template-resolver",
+  "version": "1.0.0",
+  "description": "Resolve ES6 style templates in files, together with some helper functions for generating static HTMLs based on templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alialavia/gulp-es6-template-resolver.git"
+  },
+  "keywords": [
+    "gulp",
+    "template",
+    "html",
+    "resolver",
+    "es6"
+  ],
+  "author": "Ali Alavi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alialavia/gulp-es6-template-resolver/issues"
+  },
+  "homepage": "https://github.com/alialavia/gulp-es6-template-resolver#readme",
+  "dependencies": {
+    "es6-template-strings": "^2.0.1",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "plugin-error": "^1.0.1",
+    "require-reload": "^0.2.2",
+    "through2": "^2.0.3"
+  }
+}

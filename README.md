@@ -94,7 +94,7 @@ Then you can use these functions in your html easily, like this:
 ```
 
 # Things to know:  
- - the JSON data file and the JS tag file are being watched by gulp, so any change in those will be reflected instantly.
+ - The JSON data file and the JS tag file are being watched by gulp, so any change in those will be reflected instantly.
  - The template resolver is fine with partial JSON data. So, if it doesn't find a template to resolve from the JSON or JS files provided to the template resolver, it simply ignores them. This is helpful if you are using other template literals in your html files for other purposes, e.g. other gulp tasks, or if you are using JS literals to resolve them dynamically.
  
 

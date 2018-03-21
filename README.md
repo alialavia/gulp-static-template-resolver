@@ -1,14 +1,14 @@
 # gulp-static-template-resolver
 Resolve ES6 style templates in files, together with some helper functions for generating static HTMLs based on templates.
 
-# Why is it useful
+## Why is it useful
 User of templates usually spend a lot of time going through a template to replace the dummy information with what they want. 
 The idea is to define all the information in a separate JSON file, and pass that file to a gulp task which then resolve those data. Essentially, very similiar to what happens in a dynamic web page, only that this is useful for static web pages using gulp.
 
-# How to install
+## Install
 npm i -D gulp-es6-template-resolver
 
-# How to use
+## Usage
 
 In your gulp file, define a `templateResolver` object, and a `template` task like this:
 ```
@@ -96,8 +96,10 @@ Here is a complete example:
     </nav>
 ...
 ```
+## Test
+```npm test```
 
-# Things to know:  
+## Things to know:  
  - The JSON data file and the JS tag file are being watched by gulp, so any change in those will be reflected instantly.
  - The template resolver is fine with partial JSON data. So, if it doesn't find a template to resolve from the JSON or JS files provided to the template resolver, it simply ignores them. This is helpful if you are using other template literals in your html files for other purposes, e.g. other gulp tasks, or if you are using JS literals to resolve them dynamically.
  

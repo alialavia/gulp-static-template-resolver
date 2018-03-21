@@ -47,8 +47,8 @@ Then in your html files simple use them using ES6 template literal syntax. For e
 </html>
 ```
 
-You can also define custome tag constructors inside a JS module, and then use them use them inside the templates. 
-Moroever, you can use the ```many``` helper function to avoid repetivie tasks, and also to keep related information close to each other. This is very useful when defining menus, cards etc. For example,  your './src/templates/resolve/commands.js' file might like this:
+You can also define custome tag constructors inside a JS module, and then use them use them inside the templates.
+For example,  your './src/templates/resolve/commands.js' file might like this:
 
 ```
 module.exports = {
@@ -69,8 +69,12 @@ module.exports = {
     dropdown_item: (title, url) => `<a class="dropdown-item" href="${url}">${title}</a>`,
 };
 ```
+Then you can add a menu in you html file like this: ` ${menu('Contact', 'contact.html')} `.
 
-Then you can use these functions in your html easily, like this:
+Moroever, you can use the ```many``` helper function to avoid repetivie tasks, and also to keep related information close to each other. This is very useful when defining menus, cards etc. You can pass a function as the first argument, and any number of arguments to the function as lists: For example, here is how to create 3 menus:
+` ${many(menu, ['first', 'first.html'], ['second', 'second.html'], ['third', 'third.html'])} `.
+
+Here is a complete example:
 ```
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">

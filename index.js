@@ -8,12 +8,21 @@ var fs = require('fs');
 var resolve = require('path').resolve;
 var PLUGIN_NAME = 'gulp-es6-template-resolver';
 
+function isIterable(obj) {
+  // checks for null and undefined
+  if (obj == null) {
+    return false;
+  }
+  return typeof obj[Symbol.iterator] === 'function';
+}
+
 var helpers = {
+    // Apply UI on args. If args are a list of iterables, expand the iterable and apply the function to it
+    // otherwise just apply the function to each item in args
+    // This way, many can be applied to a function like : menu(title, link), as well as menu({title, link}), or li(title)
     many: function many(ui, args) {
-        //console.log({ui, args});
         var placeholders = [].slice.call(arguments, 1);
-        //console.log({placeholders});
-        var result = placeholders.map((x) => ui(...x));
+        var result = placeholders.map((x) => isIterable(x) ? ui(...x) : ui(x) );
         return result.reduce((a, b) => a + b);
 
     }

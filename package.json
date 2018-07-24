@@ -1,6 +1,6 @@
 {
   "name": "gulp-static-template-resolver",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Resolve ES6 style templates in files, together with some helper functions for generating static HTMLs based on templates",
   "main": "index.js",
   "scripts": {
